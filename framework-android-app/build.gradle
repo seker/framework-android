@@ -1,6 +1,5 @@
 plugins {
     alias libs.plugins.androidApplication
-    alias libs.plugins.kotlinAndroid
 }
 
 android {
@@ -9,7 +8,6 @@ android {
 
     defaultConfig {
         minSdkVersion libs.versions.android.minSdk.get().toInteger()
-        targetSdkVersion libs.versions.android.targetSdk.get().toInteger()
 
         versionCode 1
         versionName "1.0.0"
@@ -26,10 +24,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
-    }
-    kotlinOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     buildFeatures {
         viewBinding true
